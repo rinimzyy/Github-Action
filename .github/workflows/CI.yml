@@ -20,10 +20,10 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
   test:
-    name: Test Api Rini
-    needs: Web
+    name: Web
+    needs: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Test API III
+      - name: Web Testing
         run: mvn clean verify

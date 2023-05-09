@@ -56,7 +56,7 @@ public class TransactionSteps {
     }
 
     @Given("I am on web alta")
-    public void intoWeb(){
+    public void intoWeb2(){
         getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app");
     }

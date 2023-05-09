@@ -6,13 +6,17 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import starter.Web.Login;
+import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 
 public class LoginSteps {
     @Steps
     Login login;
 
+
+
     @Given("I am on the login page")
     public void onTheLoginPage(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.logBtnAppear();
     }
@@ -35,6 +39,7 @@ public class LoginSteps {
 
     @Given("I am on login page")
     public void onLoginPage(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.logBtnAppear();
     }
@@ -57,6 +62,7 @@ public class LoginSteps {
 
     @Given("I am on login web page")
     public void onLoginWebPage(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.logBtnAppear();
     }
@@ -79,6 +85,7 @@ public class LoginSteps {
 
     @Given("I am on the login web page")
     public void onTheLoginWebPage(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.logBtnAppear();
     }
@@ -101,6 +108,7 @@ public class LoginSteps {
 
     @Given("On the login web page")
     public void loginWebPage(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.logBtnAppear();
     }

@@ -8,6 +8,8 @@ import net.thucydides.core.annotations.Steps;
 import starter.Web.Login;
 import starter.Web.Product;
 
+import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
+
 public class ProductSteps {
     @Steps
     Login login;
@@ -18,6 +20,7 @@ public class ProductSteps {
     //Scenario: WB0020 - Successfully select category
     @Given("I am already the web page")
     public void openWeb(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/");
     }
     @When("I click on the transaction button in the navigation menu")
@@ -37,6 +40,7 @@ public class ProductSteps {
     //Scenario: WB0021 - Successfully clear category
     @Given("I am already web page")
     public void openedWeb() {
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/");
     }
 
@@ -62,6 +66,7 @@ public class ProductSteps {
 
     @Given("I am already login to web page")
     public void login(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.inputEmail("rimzynh@mail.com");
         login.inputPassword("@Apaaja123");
@@ -86,6 +91,7 @@ public class ProductSteps {
 
     @Given("I am already login in web page")
     public void loginInWeb(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.inputEmail("rimzynh@mail.com");
         login.inputPassword("@Apaaja123");
@@ -106,6 +112,7 @@ public class ProductSteps {
 
     @Given("I am already login into web page")
     public void loginIntoWeb(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.inputEmail("rimzynh@mail.com");
         login.inputPassword("@Apaaja123");
@@ -130,6 +137,7 @@ public class ProductSteps {
 
     @Given("I am already in web page")
     public void goIntoWeb(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/");
     }
     @When("I choose 1 product")
@@ -151,6 +159,7 @@ public class ProductSteps {
 
     @Given("I am already in the web page")
     public void inWeb(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/");
     }
     @When("I choose some product")
@@ -168,6 +177,7 @@ public class ProductSteps {
 
     @Given("I am already go to web page")
     public void intoWeb(){
+        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/");
     }
     @When("I choose 1 or more product")

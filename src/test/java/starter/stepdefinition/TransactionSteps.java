@@ -10,8 +10,6 @@ import starter.Web.Logout;
 import starter.Web.Product;
 import starter.Web.Transactions;
 
-import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
-
 public class TransactionSteps {
     @Steps
     Login login;
@@ -27,7 +25,6 @@ public class TransactionSteps {
 
     @Given("I am already login to web alta")
     public void loginIntoWeb(){
-        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.inputEmail("rimzynh@mail.com");
         login.inputPassword("@Apaaja123");
@@ -57,7 +54,6 @@ public class TransactionSteps {
 
     @Given("I am on web alta")
     public void intoWeb2(){
-        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app");
     }
     @When("I add some of product to cart")
@@ -84,7 +80,6 @@ public class TransactionSteps {
 
     @Given("I am already login in web alta")
     public void alreadyInWebAlta(){
-        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.inputEmail("rimzynh@mail.com");
         login.inputPassword("@Apaaja123");
@@ -104,7 +99,6 @@ public class TransactionSteps {
 
     @Given("I am already login in the web alta")
     public void alreadyInTheWebAlta(){
-        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.inputEmail("rimzynh@mail.com");
         login.inputPassword("@Apaaja123");
@@ -132,7 +126,6 @@ public class TransactionSteps {
 
     @Given("I am already login into web alta")
     public void alreadyIntoWebAlta(){
-        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.inputEmail("rimzynh@mail.com");
         login.inputPassword("@Apaaja123");
@@ -162,7 +155,6 @@ public class TransactionSteps {
     //Scenario: WB0025 - Successfully set the number of transaction history per page
     @Given("I am already login the web alta")
     public void openWebAlta() {
-        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.inputEmail("rimzynh@mail.com");
         login.inputPassword("@Apaaja123");

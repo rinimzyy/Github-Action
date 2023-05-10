@@ -5,10 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import org.openqa.selenium.WebDriver;
 import starter.Web.Register;
-
-import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 
 
 public class RegisterStep {
@@ -18,7 +15,6 @@ public class RegisterStep {
 //    Scenario: [Positive] - Register with valid data
 //    @Given("I am on the register page")
 //    public void onTheRegisterPage() {
-//        getDriver().manage().window().maximize();
 //        register.openUrl("https://alta-shop.vercel.app/auth/register");
 //        register.validateOnRegisterPage();
 //    }
@@ -46,7 +42,6 @@ public class RegisterStep {
     //Scenario: [Negative] - Register with invalid full name
     @Given("I am go to register page")
     public void onTheRegisterPage2() {
-        getDriver().manage().window().maximize();
         register.openUrl("https://alta-shop.vercel.app/auth/register");
         register.validateOnRegisterPage();
     }
@@ -74,7 +69,6 @@ public class RegisterStep {
     //Scenario: [Negative] - Register with invalid email
     @Given("I am go into register page")
     public void onTheRegisterPage3() {
-        getDriver().manage().window().maximize();
         register.openUrl("https://alta-shop.vercel.app/auth/register");
         register.validateOnRegisterPage();
     }

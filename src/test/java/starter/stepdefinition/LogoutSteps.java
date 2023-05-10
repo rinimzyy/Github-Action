@@ -8,7 +8,6 @@ import net.thucydides.core.annotations.Steps;
 import starter.Web.Login;
 import starter.Web.Logout;
 
-import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 
 public class LogoutSteps {
     @Steps
@@ -19,7 +18,6 @@ public class LogoutSteps {
 
     @Given("I am already login")
     public void onTheLoginPage(){
-        getDriver().manage().window().maximize();
         login.openUrl("https://alta-shop.vercel.app/auth/login");
         login.inputEmail("rimzynh@mail.com");
         login.inputPassword("@Apaaja123");

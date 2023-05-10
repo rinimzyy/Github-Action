@@ -5,21 +5,29 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>WebTesting</artifactId>
+    <artifactId>MiniProject_API</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Sample Serenity BDD project using Cucumber</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>3.6.21</serenity.version>
+        <serenity.version>3.6.12</serenity.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
+            <version>${serenity.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-rest-assured</artifactId>
             <version>${serenity.version}</version>
             <scope>test</scope>
         </dependency>
@@ -50,31 +58,48 @@
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-launcher</artifactId>
-            <version>1.8.2</version>
+            <version>1.9.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.2</version>
+            <version>5.9.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.8.2</version>
+            <version>5.9.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.10</version>
+            <version>1.4.6</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.23.1</version>
+            <version>3.24.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.0</version>
+            <scope>import</scope>
         </dependency>
     </dependencies>
     <build>
@@ -93,9 +118,9 @@
                 <configuration>
                     <includes>
                         <include>**/*Test.java</include>
-                        <include>**/Test*.java</include>
+                        <include>*/Test.java</include>
                         <include>**/*TestSuite.java</include>
-                        <include>**/When*.java</include>
+                        <include>*/When.java</include>
                     </includes>
                     <systemPropertyVariables>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
